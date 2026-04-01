@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xavier Zhang — FinTech Product Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">XZ</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#ai-projects">AI & Code</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#portfolio" class="mobile-link">Work</a>
+      <a href="#ai-projects" class="mobile-link">AI & Code</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">Product Manager</div>
+      <h1 class="hero-name reveal">Xavier<br /><span>Zhang</span></h1>
+      <p class="hero-title reveal">FinTech Product Manager<br /><em>Expertise in Wealth Onboarding</em></p>
+      <div class="hero-langs reveal">
+        <span>English</span><span class="sep">·</span>
+        <span>Français</span><span class="sep">·</span>
+        <span>中文</span>
+      </div>
+      <div class="hero-cta reveal">
+        <a href="#portfolio" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label reveal">About</div>
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <h2 class="section-heading">Building products<br />at the intersection of<br /><span>finance & technology</span></h2>
+        </div>
+        <div class="about-right reveal">
+          <p class="about-bio">
+            Xavier is a multilingual professional fluent in English, French, and Mandarin, with over 10 years of experience in product management and 2.5 years in management consulting. He has successfully built and exited two startups, demonstrating a strong ability to identify and monetize business opportunities in fast-paced environments.
+          </p>
+          <p class="about-bio">
+            As a global top 5% MBA candidate, Xavier completed his Rotman MBA with a focus on people leadership and product management. Following his MBA, he has held key roles at leading financial institutions, including Scotiabank and CIBC, where he has delivered strategic projects with high complexity.
+          </p>
+          <p class="about-bio">
+            Xavier is recognized for his ability to lead tough negotiations, make difficult yet strategic decisions, build consensus across stakeholders, and deliver innovative solutions that drive organizational growth.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Years in Product</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">2</span>
+              <span class="stat-label">Startups Built & Exited</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">Top 5%</span>
+              <span class="stat-label">Rotman MBA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="competencies reveal">
+        <div class="competency-tag">Sr. Product Manager @CIBC Investor's Edge</div>
+        <div class="competency-tag">FinTech Product Management</div>
+        <div class="competency-tag">Transformation & Change Management</div>
+        <div class="competency-tag">Strategy & Management Consulting</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="section-label reveal">Work</div>
+      <h2 class="section-heading reveal">Selected Projects</h2>
+      <p class="section-sub reveal">Product work, strategy deliverables, and case studies from across my career.</p>
+
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="product">Product</button>
+        <button class="filter-btn" data-filter="strategy">Strategy</button>
+        <button class="filter-btn" data-filter="case-study">Case Study</button>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <article class="portfolio-card reveal" data-category="product" data-href="pages/cibc-investors-edge.html">
+          <div class="card-inner">
+            <div class="card-meta">
+              <span class="card-type">Product</span>
+              <span class="card-org">CIBC</span>
+            </div>
+            <h3 class="card-title">CIBC Investor's Edge — Wealth Onboarding Redesign</h3>
+            <p class="card-desc">Led end-to-end redesign of the self-directed investing onboarding flow, reducing drop-off and accelerating time-to-trade for new retail investors.</p>
+            <div class="card-tags">
+              <span>Onboarding</span><span>Self-Directed Investing</span><span>UX Strategy</span>
+            </div>
+            <div class="card-arrow">→</div>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal" data-category="strategy" data-href="pages/scotiabank-strategy.html">
+          <div class="card-inner">
+            <div class="card-meta">
+              <span class="card-type">Strategy</span>
+              <span class="card-org">Scotiabank</span>
+            </div>
+            <h3 class="card-title">Digital Transformation Roadmap — Retail Banking</h3>
+            <p class="card-desc">Developed a multi-year digital transformation strategy for retail banking operations, aligning stakeholders across technology, compliance, and business units.</p>
+            <div class="card-tags">
+              <span>Transformation</span><span>Roadmap</span><span>Stakeholder Mgmt</span>
+            </div>
+            <div class="card-arrow">→</div>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal" data-category="case-study" data-href="pages/startup-exit.html">
+          <div class="card-inner">
+            <div class="card-meta">
+              <span class="card-type">Case Study</span>
+              <span class="card-org">Startup</span>
+            </div>
+            <h3 class="card-title">From Zero to Exit — Startup #1</h3>
+            <p class="card-desc">Built and scaled a B2B SaaS product from ideation to acquisition. Covers go-to-market strategy, fundraising, and the exit process.</p>
+            <div class="card-tags">
+              <span>B2B SaaS</span><span>Go-To-Market</span><span>Exit Strategy</span>
+            </div>
+            <div class="card-arrow">→</div>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal" data-category="product" data-href="pages/wealth-onboarding.html">
+          <div class="card-inner">
+            <div class="card-meta">
+              <span class="card-type">Product</span>
+              <span class="card-org">FinTech</span>
+            </div>
+            <h3 class="card-title">Wealth Onboarding — KYC & Compliance Automation</h3>
+            <p class="card-desc">Designed an automated KYC pipeline that cut onboarding time by 60% while maintaining full regulatory compliance across Canadian financial regulations.</p>
+            <div class="card-tags">
+              <span>KYC</span><span>Compliance</span><span>Automation</span>
+            </div>
+            <div class="card-arrow">→</div>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal" data-category="strategy" data-href="pages/consulting-playbook.html">
+          <div class="card-inner">
+            <div class="card-meta">
+              <span class="card-type">Strategy</span>
+              <span class="card-org">Consulting</span>
+            </div>
+            <h3 class="card-title">Change Management Playbook for Financial Services</h3>
+            <p class="card-desc">Created a repeatable change management framework adopted across a major bank's product organization, improving delivery velocity and cross-team alignment.</p>
+            <div class="card-tags">
+              <span>Change Management</span><span>Framework</span><span>Financial Services</span>
+            </div>
+            <div class="card-arrow">→</div>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal" data-category="case-study" data-href="pages/rotman-mba.html">
+          <div class="card-inner">
+            <div class="card-meta">
+              <span class="card-type">Case Study</span>
+              <span class="card-org">Rotman MBA</span>
+            </div>
+            <h3 class="card-title">MBA Capstone — FinTech Product Strategy in Emerging Markets</h3>
+            <p class="card-desc">Analyzed market entry opportunities for digital wealth management products in Southeast Asia, delivering a comprehensive product strategy and business case.</p>
+            <div class="card-tags">
+              <span>Market Entry</span><span>Wealth Management</span><span>Product Strategy</span>
+            </div>
+            <div class="card-arrow">→</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AI & CODING PROJECTS -->
+  <section class="ai-projects section" id="ai-projects">
+    <div class="container">
+      <div class="section-label reveal">Personal Projects</div>
+      <h2 class="section-heading reveal">AI & Coding Work</h2>
+      <p class="section-sub reveal">Side projects exploring AI, automation, and financial tooling.</p>
+
+      <div class="ai-grid">
+
+        <article class="ai-card reveal">
+          <div class="ai-card-header">
+            <div class="ai-icon">⚡</div>
+            <a href="https://github.com/xavierzhang21" target="_blank" rel="noopener" class="github-link" aria-label="View on GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.73-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="ai-card-title">FinTech Data Scraper & Analyzer</h3>
+          <p class="ai-card-desc">Automated pipeline to scrape public financial data, normalize it, and surface insights via a simple dashboard. Built for personal investment research.</p>
+          <div class="ai-tags">
+            <span>Python</span><span>BeautifulSoup</span><span>Pandas</span><span>Streamlit</span>
+          </div>
+        </article>
+
+        <article class="ai-card reveal">
+          <div class="ai-card-header">
+            <div class="ai-icon">🤖</div>
+            <a href="https://github.com/xavierzhang21" target="_blank" rel="noopener" class="github-link" aria-label="View on GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.73-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="ai-card-title">LLM-Powered PRD Generator</h3>
+          <p class="ai-card-desc">A CLI tool that takes rough product ideas as input and outputs structured PRD drafts using GPT-4, reducing first-draft writing time significantly.</p>
+          <div class="ai-tags">
+            <span>Python</span><span>OpenAI API</span><span>CLI</span><span>Prompt Eng.</span>
+          </div>
+        </article>
+
+        <article class="ai-card reveal">
+          <div class="ai-card-header">
+            <div class="ai-icon">📊</div>
+            <a href="https://github.com/xavierzhang21" target="_blank" rel="noopener" class="github-link" aria-label="View on GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.73-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="ai-card-title">Personal Portfolio Website</h3>
+          <p class="ai-card-desc">This very site — hand-coded with vanilla HTML, CSS, and JavaScript. Glassmorphism design, fully responsive, and deployed on GitHub Pages.</p>
+          <div class="ai-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="ai-cta reveal">
+        <a href="https://github.com/xavierzhang21" target="_blank" rel="noopener" class="btn-ghost">
+          View All on GitHub
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-left:6px;vertical-align:-2px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.73-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label reveal">Contact</div>
+      <h2 class="section-heading reveal">Let's Connect</h2>
+      <p class="section-sub reveal">Open to conversations about product, strategy, and interesting problems.</p>
+
+      <div class="contact-grid">
+        <a href="mailto:Xavier.zhang21@gmail.com" class="contact-card reveal">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">Xavier.zhang21@gmail.com</span>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/xavier-zhang21/" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">xavier-zhang21</span>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <a href="https://github.com/xavierzhang21" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.73-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">xavierzhang21</span>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-logo">XZ</span>
+          <span class="footer-copy">© 2025 Xavier Zhang. All rights reserved.</span>
+        </div>
+        <div class="footer-right">
+          <a href="mailto:Xavier.zhang21@gmail.com" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/xavier-zhang21/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com/xavierzhang21" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.73-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
