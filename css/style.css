@@ -250,20 +250,19 @@ svg { vertical-align: middle; }
 }
 
 /* LEFT column — everything center-aligned, all children constrained to max-width 300px */
+/* Photo, langs and buttons all fixed 300px so they share identical centre axis */
 .hero-left { display: flex; flex-direction: column; gap: var(--space-sm); align-items: center; }
-.hero-photo-wrap { width: 100%; max-width: 300px; }
+.hero-photo-wrap { width: 300px; }
 .hero-photo {
   aspect-ratio: 3/4; border-radius: 10px; overflow: hidden;
   background: var(--stone); border: 1px solid var(--silver);
   box-shadow: 0 16px 48px rgba(56,59,62,0.12);
 }
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; filter: grayscale(8%) brightness(0.97); }
-/* Langs and CTA both match photo width so they align perfectly */
-.hero-langs { width: 100%; max-width: 300px; display: flex; align-items: center; gap: 7px; font-size: 0.75rem; color: var(--steel); font-weight: 400; flex-wrap: wrap; justify-content: center; }
+.hero-langs { width: 300px; display: flex; align-items: center; gap: 7px; font-size: 0.75rem; color: var(--steel); font-weight: 400; flex-wrap: wrap; justify-content: center; }
 .langs-label { font-weight: 700; color: var(--charcoal); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; }
 .hero-langs .sep { color: var(--stone); }
-/* Buttons: equal width, stacked so both stretch to same size */
-.hero-cta { width: 100%; max-width: 300px; display: flex; flex-direction: column; gap: 10px; }
+.hero-cta { width: 300px; display: flex; flex-direction: column; gap: 10px; }
 .hero-cta .btn-primary,
 .hero-cta .btn-ghost { width: 100%; justify-content: center; }
 
