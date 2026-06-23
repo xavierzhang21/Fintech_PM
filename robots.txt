@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xavierzhang21.github.io/Fintech_PM/sitemap.xml
