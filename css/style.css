@@ -355,24 +355,48 @@ svg { vertical-align: middle; }
 .about-bio { font-size: 0.96rem; font-weight: 300; color: var(--steel); line-height: 1.82; margin-bottom: 18px; }
 .about-bio strong { font-weight: 600; color: var(--charcoal); }
 
-/* Timeline */
-.timeline { margin-top: var(--space-lg); padding-left: 26px; border-left: 2px solid var(--stone); }
-.timeline-item { position: relative; margin-bottom: var(--space-md); padding-bottom: var(--space-md); border-bottom: 1px solid var(--off-white); }
-.timeline-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-.timeline-dot {
-  position: absolute; left: -33px; top: 5px;
-  width: 11px; height: 11px; background: var(--crimson); border-radius: 50%;
-  border: 2px solid var(--white); box-shadow: 0 0 0 2px var(--crimson-pale);
+/* One-pager career card (replaces timeline) */
+.onepager-card {
+  margin-top: var(--space-lg);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 14px;
+  padding: 14px;
 }
-.timeline-item:first-child .timeline-dot::after {
-  content: ''; position: absolute; inset: -4px; border-radius: 50%;
-  border: 1.5px solid var(--crimson); opacity: 0; animation: dotPulse 2.5s ease-out infinite;
+.onepager-frame-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 960 / 540;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f7f7f8;
+  border: 1px solid var(--stone);
 }
-@keyframes dotPulse { 0% { opacity: 0.6; transform: scale(1); } 100% { opacity: 0; transform: scale(2.2); } }
-.timeline-period { font-family: var(--font); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; color: var(--crimson); text-transform: uppercase; margin-bottom: 4px; }
-.timeline-role { font-family: var(--font); font-size: 1rem; font-weight: 700; color: var(--charcoal); letter-spacing: -0.01em; margin-bottom: 3px; }
-.timeline-org { font-size: 0.88rem; font-weight: 400; color: var(--charcoal); opacity: 0.6; margin-bottom: 8px; }
-.timeline-desc { font-size: 0.85rem; color: var(--steel); font-weight: 300; line-height: 1.7; }
+.onepager-frame-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: #f7f7f8;
+}
+.onepager-open {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  padding-left: 4px;
+  font-family: var(--font);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--crimson);
+  transition: opacity 0.2s;
+}
+.onepager-open:hover { opacity: 0.75; }
 
 /* ============================================================
    WORK PROJECTS

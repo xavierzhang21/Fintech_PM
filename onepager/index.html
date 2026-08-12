@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xavier Zhang — One-Pager</title>
+  <style>
+    :root {
+      --magenta: #e20778;
+      --magenta-soft: #e3147f;
+      --maroon: #8b1740;
+      --blue: #0070c0;
+      --ink: #111111;
+      --muted: #222222;
+      --panel: #f2f2f2;
+      --line: #f2f2f2;
+      --white: #ffffff;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      --font: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(226, 7, 120, 0.05), transparent 55%),
+        radial-gradient(900px 600px at 90% 80%, rgba(0, 0, 0, 0.03), transparent 50%),
+        #f7f7f8;
+      font-family: var(--font);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .stage {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    .slide {
+      position: relative;
+      width: 960px;
+      height: 540px;
+      background: var(--white);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.10),
+        0 2px 8px rgba(0, 0, 0, 0.04);
+      transform-origin: center center;
+    }
+
+    .divider-h {
+      position: absolute;
+      left: 0;
+      top: 133.8px;
+      width: 960px;
+      height: 1.5px;
+      background: var(--line);
+    }
+
+    .divider-v {
+      position: absolute;
+      left: 244.07px;
+      top: 135.81px;
+      width: 1.5px;
+      height: 404.19px;
+      background: var(--line);
+    }
+
+    /* Header */
+    .photo-wrap {
+      position: absolute;
+      left: 16.4px;
+      top: 39.8px;
+      width: 72.4px;
+      height: 72.4px;
+      border-radius: 50%;
+      border: 1.5px solid var(--magenta);
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .name {
+      position: absolute;
+      left: 102.7px;
+      top: 33.1px;
+      font-size: 20.1px;
+      font-weight: 700;
+      color: var(--magenta);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .intro {
+      position: absolute;
+      left: 108.2px;
+      top: 65.7px;
+      width: 320px;
+      list-style: none;
+      font-size: 11px;
+      line-height: 1.12;
+      color: var(--ink);
+    }
+
+    .intro li {
+      position: relative;
+      padding-left: 13.6px;
+      margin-bottom: 8.5px;
+    }
+
+    .intro li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .cards {
+      position: absolute;
+      left: 457.17px;
+      top: 23.61px;
+      width: 484.08px;
+      height: 98.94px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 11.44px;
+    }
+
+      .card {
+      background: var(--panel);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 10px 12px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .card .card-icon {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .card p {
+      font-size: 11px;
+      line-height: 1.55;
+      color: var(--ink);
+    }
+
+    /* Left column */
+    .rotman {
+      position: absolute;
+      left: 74.2px;
+      top: 137.8px;
+      width: 93.6px;
+      height: auto;
+    }
+
+    .edu-box {
+      position: absolute;
+      left: 11.48px;
+      top: 180.99px;
+      width: 219.05px;
+      height: 64.19px;
+      background: var(--panel);
+      border-radius: 10px;
+      padding: 8px 10px 8px 8px;
+    }
+
+    .edu-box ul {
+      list-style: none;
+      font-size: 10px;
+      line-height: 1.1;
+    }
+
+    .edu-box li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 7px;
+    }
+
+    .edu-box li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      font-size: 11px;
+    }
+
+    .skill-block {
+      position: absolute;
+      left: 25.18px;
+      width: 210px;
+      height: 120px;
+    }
+
+    .skill-block.leadership { top: 263.83px; }
+    .skill-block.technical { top: 381.25px; }
+
+    .skill-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 37.82px;
+      height: 36.41px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .skill-title {
+      position: absolute;
+      left: 43.02px;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .skill-block.leadership .skill-title {
+      top: 10.37px;
+      font-size: 10.6px;
+    }
+
+    .skill-block.technical .skill-title {
+      top: 8.55px;
+      font-size: 11px;
+    }
+
+    .skill-list {
+      position: absolute;
+      left: 43.02px;
+      list-style: none;
+      font-size: 11px;
+      line-height: 1.1;
+    }
+
+    .skill-block.leadership .skill-list { top: 28.97px; }
+    .skill-block.technical .skill-list { top: 27.75px; }
+
+    .skill-list li {
+      height: 18.8px;
+      padding-left: 0;
+    }
+
+    .skill-list li::before {
+      content: "✓";
+      margin-right: 1px;
+    }
+
+    /* Career column */
+    .stairs {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 960px;
+      height: 540px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .career {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+
+    .logo {
+      position: absolute;
+      object-fit: contain;
+    }
+
+    .logo.woniufr { left: 270.2px; top: 242.2px; width: 102.1px; height: 32.4px; }
+    .logo.avasta { left: 423.3px; top: 220.5px; width: 90.4px; height: 27.3px; }
+    .logo.scotia {
+      left: 554.3px;
+      top: 189.2px;
+      width: 127.2px;
+      height: 31.2px;
+      background: #fff;
+    }
+    .logo.cibc { left: 765.8px; top: 158.5px; width: 110.1px; height: 31.9px; }
+
+    .role {
+      position: absolute;
+      font-size: 10px;
+      line-height: 1.8;
+      color: var(--ink);
+    }
+
+    .role .years {
+      display: inline-block;
+      border-bottom: 0.7px solid #000;
+      line-height: 1.1;
+      padding-bottom: 1px;
+      margin-bottom: 4px;
+    }
+
+    .role .title {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 4px;
+      line-height: 1.1;
+    }
+
+    .role ul {
+      list-style: none;
+    }
+
+    .role li {
+      position: relative;
+      padding-left: 13.5px;
+      margin-bottom: 1px;
+      line-height: 1.8;
+    }
+
+    .role li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 11px;
+    }
+
+    .role .hl { color: var(--blue); }
+    .role strong { font-weight: 700; }
+
+      .role.r1 { left: 259.3px; top: 301.9px; width: 138px; }
+    .role.r2 { left: 408.5px; top: 271.5px; width: 140px; }
+    .role.r3 { left: 557.7px; top: 238.9px; width: 145px; }
+    .role.r4a { left: 713.7px; top: 214.7px; width: 218px; }
+    .role.r4b { left: 719.7px; top: 351.1px; width: 218px; }
+
+    /* Tiny presentation controls */
+    .chrome {
+      position: absolute;
+      right: 6px;
+      bottom: 6px;
+      z-index: 20;
+      display: flex;
+      gap: 3px;
+      opacity: 0.12;
+      transition: opacity 180ms ease;
+    }
+
+    .slide:hover .chrome,
+    .chrome:focus-within,
+    body.editing .chrome {
+      opacity: 0.42;
+    }
+
+    .chrome button {
+      width: 14px;
+      height: 14px;
+      border: 0;
+      border-radius: 4px;
+      background: rgba(17, 17, 17, 0.45);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      padding: 0;
+      backdrop-filter: blur(6px);
+    }
+
+    .chrome button:hover { background: rgba(17, 17, 17, 0.72); }
+    .chrome button.active { background: var(--magenta); opacity: 1; }
+    .chrome svg { width: 8px; height: 8px; display: block; }
+
+    .toast {
+      position: absolute;
+      left: 50%;
+      bottom: 14px;
+      transform: translateX(-50%);
+      background: rgba(17, 17, 17, 0.82);
+      color: #fff;
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 200ms ease;
+      z-index: 30;
+      letter-spacing: 0.01em;
+    }
+
+    .toast.show { opacity: 1; }
+
+    body.editing [contenteditable="true"] {
+      outline: 1px dashed rgba(226, 7, 120, 0.35);
+      outline-offset: 2px;
+      border-radius: 3px;
+      min-width: 8px;
+    }
+
+    body.editing [contenteditable="true"]:focus {
+      outline: 1.5px solid rgba(226, 7, 120, 0.7);
+      background: rgba(226, 7, 120, 0.04);
+    }
+
+    /* Embedded inside portfolio card */
+    html.embed, html.embed body {
+      background: transparent;
+      overflow: hidden;
+    }
+    html.embed .stage {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+    html.embed .chrome,
+    html.embed .toast {
+      display: none !important;
+    }
+
+    input[type="file"] { display: none; }
+
+    @media print {
+      html, body { background: #fff; }
+      .stage { display: block; }
+      .slide {
+        border-radius: 0;
+        box-shadow: none;
+        transform: none !important;
+        width: 960px;
+        height: 540px;
+      }
+      .chrome, .toast { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="slide" id="slide">
+      <div class="divider-h"></div>
+      <div class="divider-v"></div>
+
+      <div class="photo-wrap">
+        <img src="assets/photo.png" alt="Xavier Zhang" />
+      </div>
+
+      <h1 class="name" data-key="name">Xavier Zhang, MBA</h1>
+      <ul class="intro">
+        <li data-key="intro1">MBA, Rotman School of Management, University of Toronto</li>
+        <li data-key="intro2">Current Role: Sr. Product Owner, CIBC Investor’s Edge</li>
+        <li data-key="intro3">Product Manager with both MBA and Computer Science</li>
+      </ul>
+
+      <div class="cards">
+        <div class="card">
+          <img class="card-icon" src="assets/icon_hex.png" alt="" />
+          <p data-key="card1">Good at and enjoy solving complex problems to deliver business impact</p>
+        </div>
+        <div class="card">
+          <img class="card-icon" src="assets/icon_gauge.png" alt="" />
+          <p data-key="card2">An adaptive planner who executes plans analytically and logically</p>
+        </div>
+        <div class="card">
+          <img class="card-icon" src="assets/icon_target.png" alt="" />
+          <p data-key="card3">Goal-oriented servient leader who inspire the team with common goals</p>
+        </div>
+      </div>
+
+      <img class="rotman" src="assets/rotman.png" alt="Rotman University of Toronto" />
+
+      <div class="edu-box">
+        <ul>
+          <li data-key="edu1">Rotman MBA at University of Toronto</li>
+          <li><strong data-key="edu2">GMAT 740 (Global Top 5%)</strong></li>
+          <li data-key="edu3">VP of Rotman Pride</li>
+        </ul>
+      </div>
+
+      <div class="skill-block leadership">
+        <img class="skill-icon" src="assets/icon_crown.png" alt="" />
+        <div class="skill-title" data-key="leadTitle">Leadership skills:</div>
+        <ul class="skill-list">
+          <li data-key="lead1">Product Management</li>
+          <li data-key="lead2">Business Transformation</li>
+          <li data-key="lead3">Change Management</li>
+          <li data-key="lead4">Management Consulting</li>
+        </ul>
+      </div>
+
+      <div class="skill-block technical">
+        <img class="skill-icon" src="assets/icon_tools.png" alt="" />
+        <div class="skill-title" data-key="techTitle">Technical Skills</div>
+        <ul class="skill-list">
+          <li data-key="tech1">A/B Testing Design</li>
+          <li data-key="tech2">AI Prototyping</li>
+          <li data-key="tech3">Power BI Dashboard</li>
+          <li data-key="tech4">SQL Data Analytics</li>
+        </ul>
+      </div>
+
+      <svg class="stairs" viewBox="0 0 960 540" aria-hidden="true">
+        <!-- Butt-capped segments meet at exact corners (no square-cap overhang) -->
+        <g stroke="#e20778" stroke-width="4.5" stroke-linecap="butt" stroke-linejoin="miter" fill="none">
+          <path d="M256.71 282.64 H393.19" />
+          <path d="M393.19 282.64 V256.69" />
+          <path d="M393.19 256.69 H538.96" />
+          <path d="M538.96 256.69 V227.43" />
+          <path d="M538.96 227.43 H698.96" />
+          <path d="M698.96 227.43 V200.72" />
+        </g>
+        <path fill="#e3147f" d="M698.96 198.46 H924.33 V202.97 H698.96 Z" />
+        <path fill="#e3147f" d="M922.08 193.97 L935.58 200.72 L922.08 207.47 Z" />
+      </svg>
+
+      <div class="career">
+        <img class="logo woniufr" src="assets/woniufr.png" alt="Woniufr" />
+        <img class="logo avasta" src="assets/avasta.png" alt="Avasta" />
+        <img class="logo scotia" src="assets/scotiabank.png" alt="Scotiabank" />
+        <img class="logo cibc" src="assets/cibc.png" alt="CIBC" />
+
+        <div class="role r1">
+          <div class="years" data-key="r1years">2014-2019</div>
+          <div class="title" data-key="r1title">Entrepreneur</div>
+          <ul>
+            <li data-key="r1b1"><span class="hl">Woniufr</span> has served over 1 million users since its inception and continues to operate with a profit margin of 40%</li>
+            <li data-key="r1b2">Successfully sold ‘I Do Translation’ business for approx. 400,000 USD.</li>
+          </ul>
+        </div>
+
+        <div class="role r2">
+          <div class="years" data-key="r2years">2021-2022</div>
+          <div class="title" data-key="r2title">Management Consultant</div>
+          <ul>
+            <li data-key="r2b1">Specializing in product management, brand research, brand strategy at <span class="hl">Avasta</span></li>
+            <li data-key="r2b2">Developed and launched a new Training as a service (TaaS) product, generating $100,000 USD in gross revenue within one month of its launch</li>
+          </ul>
+        </div>
+
+        <div class="role r3">
+          <div class="years" data-key="r3years">2022-2024</div>
+          <div class="title" data-key="r3title">Product Owner, Payments</div>
+          <ul>
+            <li data-key="r3b1">One of the two POs of <span class="hl">ScotiaConnect</span> (Digital Banking for Business) at Global Business Payments</li>
+            <li data-key="r3b2">Delivered products including EFT, Wires, Deposit, Statements, CIAM, Accessibility and Adobe Analytics</li>
+          </ul>
+        </div>
+
+        <div class="role r4a">
+          <div class="years" data-key="r4ayears">2024-2025</div>
+          <div class="title" data-key="r4atitle">Sr. Consultant, Process Optimization, Wealth</div>
+          <ul>
+            <li data-key="r4ab1">Management Consulting: achieved a yearly $300,000 in avoided professional fees</li>
+            <li data-key="r4ab2">AI-Enabled Process Optimization: launched an AI tool to lift productivity by 60%.</li>
+          </ul>
+        </div>
+
+        <div class="role r4b">
+          <div class="years" data-key="r4byears">2025-Present</div>
+          <div class="title" data-key="r4btitle">Sr. Product Owner, Investor’s Edge, Wealth</div>
+          <ul>
+            <li data-key="r4bb1">Own everything related to client’s <strong>onboarding for trading.</strong></li>
+            <li data-key="r4bb2">Business Transformation: <strong>transformed waterfall to agile; introduced data</strong> dashboards and monthly showcases.</li>
+            <li data-key="r4bb3">Product Strategy and Delivery: P/L, user research, prioritization and optimization.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chrome" title="Presentation tools">
+        <button id="btnEdit" type="button" aria-label="Edit" title="Edit">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 20h4.2L19.2 8.9a1.8 1.8 0 0 0 0-2.5L17.6 4.8a1.8 1.8 0 0 0-2.5 0L4 16.0V20Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m13.8 6.4 3.8 3.8" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <button id="btnSave" type="button" aria-label="Save JSON" title="Save JSON">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 3h11l3 3v15H5V3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 3v6h8V3M8 17h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button id="btnLoad" type="button" aria-label="Load JSON" title="Load JSON">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m8 10 4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <div class="toast" id="toast"></div>
+      <input id="fileInput" type="file" accept="application/json,.json" />
+    </div>
+  </div>
+
+  <script>
+    if (new URLSearchParams(location.search).has("embed") || window.self !== window.top) {
+      document.documentElement.classList.add("embed");
+    }
+
+    const slide = document.getElementById("slide");
+    const btnEdit = document.getElementById("btnEdit");
+    const btnSave = document.getElementById("btnSave");
+    const btnLoad = document.getElementById("btnLoad");
+    const fileInput = document.getElementById("fileInput");
+    const toast = document.getElementById("toast");
+    const editableSelector = "[data-key]";
+
+    const defaultData = collectData();
+
+    function fitSlide() {
+      const pad = document.documentElement.classList.contains("embed") ? 0 : 24;
+      const scale = Math.min(
+        (window.innerWidth - pad) / 960,
+        (window.innerHeight - pad) / 540
+      );
+      slide.style.transform = `scale(${Math.max(scale, 0.2)})`;
+    }
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(showToast._t);
+      showToast._t = setTimeout(() => toast.classList.remove("show"), 1600);
+    }
+
+    function setEditing(on) {
+      document.body.classList.toggle("editing", on);
+      btnEdit.classList.toggle("active", on);
+      document.querySelectorAll(editableSelector).forEach((el) => {
+        el.contentEditable = on ? "true" : "false";
+        if (!on) el.blur();
+      });
+      showToast(on ? "Edit mode on" : "Edit mode off");
+    }
+
+    function collectData() {
+      const data = { version: 1 };
+      document.querySelectorAll(editableSelector).forEach((el) => {
+        data[el.dataset.key] = el.innerHTML.trim();
+      });
+      return data;
+    }
+
+    function applyData(data) {
+      if (!data || typeof data !== "object") throw new Error("Invalid JSON");
+      document.querySelectorAll(editableSelector).forEach((el) => {
+        const key = el.dataset.key;
+        if (Object.prototype.hasOwnProperty.call(data, key)) {
+          el.innerHTML = data[key];
+        }
+      });
+    }
+
+    function saveJson() {
+      const payload = collectData();
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      const stamp = new Date().toISOString().slice(0, 10);
+      a.href = URL.createObjectURL(blob);
+      a.download = `XavierZhang_OnePager_${stamp}.json`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+      try { localStorage.setItem("onepager-content", JSON.stringify(payload)); } catch (_) {}
+      showToast("JSON saved");
+    }
+
+    function loadJsonFile(file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const data = JSON.parse(reader.result);
+          applyData(data);
+          try { localStorage.setItem("onepager-content", JSON.stringify(collectData())); } catch (_) {}
+          showToast("JSON loaded");
+        } catch (err) {
+          showToast("Invalid JSON file");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    btnEdit.addEventListener("click", () => {
+      setEditing(!document.body.classList.contains("editing"));
+    });
+
+    btnSave.addEventListener("click", saveJson);
+    btnLoad.addEventListener("click", () => fileInput.click());
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files && fileInput.files[0];
+      if (file) loadJsonFile(file);
+      fileInput.value = "";
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "e") {
+        e.preventDefault();
+        setEditing(!document.body.classList.contains("editing"));
+      }
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "s") {
+        e.preventDefault();
+        saveJson();
+      }
+      if (e.key === "Escape" && document.body.classList.contains("editing")) {
+        setEditing(false);
+      }
+    });
+
+    // Persist light edits between reloads when possible
+    try {
+      const cached = localStorage.getItem("onepager-content");
+      if (cached) applyData(JSON.parse(cached));
+    } catch (_) {
+      applyData(defaultData);
+    }
+
+    window.addEventListener("resize", fitSlide);
+    fitSlide();
+  </script>
+</body>
+</html>
