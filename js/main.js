@@ -6,6 +6,17 @@
 (function () {
   'use strict';
 
+  /* GitHub Pages project sites break relative URLs without a trailing slash */
+  (function normalizeProjectPath() {
+    var path = window.location.pathname;
+    if (!path || path.endsWith('/') || /\.[a-z0-9]+$/i.test(path)) return;
+    window.history.replaceState(
+      null,
+      '',
+      path + '/' + window.location.search + window.location.hash
+    );
+  })();
+
   /* ── Nav glass effect ── */
   const nav = document.getElementById('nav');
   if (nav) {

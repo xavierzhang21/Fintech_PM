@@ -366,23 +366,24 @@ svg { vertical-align: middle; }
   border-radius: 14px;
   padding: 14px;
 }
-.onepager-frame-wrap {
-  position: relative;
+.onepager-visual {
+  display: block;
   width: 100%;
-  aspect-ratio: 960 / 540;
   border-radius: 10px;
   overflow: hidden;
-  background: #f7f7f8;
   border: 1px solid var(--stone);
+  background: #fff;
+  transition: box-shadow 0.25s, transform 0.25s var(--ease-out);
 }
-.onepager-frame-wrap iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+.onepager-visual:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(56, 59, 62, 0.12);
+}
+.onepager-visual img {
   display: block;
-  background: #f7f7f8;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 .onepager-open {
   display: inline-flex;
