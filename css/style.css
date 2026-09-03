@@ -610,7 +610,8 @@ svg { vertical-align: middle; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
-  .portfolio-grid, .ai-grid, .contact-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid, .ai-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: repeat(3, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: var(--space-lg); }
   .about-left .section-heading { position: static; }
   .hero-body { grid-template-columns: 1fr 1fr; gap: var(--space-lg); }
