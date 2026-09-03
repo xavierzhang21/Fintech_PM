@@ -552,7 +552,7 @@ svg { vertical-align: middle; }
 }
 .contact-tagline strong { font-weight: 700; color: var(--charcoal); }
 
-.contact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); }
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
 .contact-card {
   display: flex; align-items: center; gap: 16px; padding: 22px 24px;
   background: var(--glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
